@@ -11,6 +11,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 # Add library files
 add_subdirectory("thirdparty/raylib")
+add_subdirectory("thirdparty/tileson")
 
 
 
@@ -26,5 +27,4 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PUBLIC RECOURSES_PATH="${CMAKE_
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include/)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE raylib_static) #Add libraries here
-
+target_link_libraries(${PROJECT_NAME} PRIVATE raylib_static raylib-tileson) #Add libraries here

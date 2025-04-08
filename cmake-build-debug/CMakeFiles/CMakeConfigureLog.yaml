@@ -5,17 +5,7 @@ events:
     kind: "message-v1"
     backtrace:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:7 (project)"
-    message: |
-      The system is: Windows - 10.0.22631 - AMD64
-
----
-events:
-  -
-    kind: "message-v1"
-    backtrace:
-      - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineSystem.cmake:205 (message)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       The system is: Windows - 10.0.22631 - AMD64
   -
@@ -24,7 +14,7 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
       Compiler:  
@@ -34,7 +24,7 @@ events:
       The output was:
       0
       MSBuild version 17.12.12+1cce77968 for .NET Framework
-      Build started 4/7/2025 9:01:43 PM.
+      Build started 4/8/2025 7:07:24 AM.
       
       Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\3.30.5\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -63,7 +53,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:02.45
+      Time Elapsed 00:00:01.05
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +69,7 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
       Compiler:  
@@ -89,7 +79,7 @@ events:
       The output was:
       0
       MSBuild version 17.12.12+1cce77968 for .NET Framework
-      Build started 4/7/2025 9:01:46 PM.
+      Build started 4/8/2025 7:07:25 AM.
       
       Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\3.30.5\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -118,7 +108,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:01.54
+      Time Elapsed 00:00:01.12
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -133,55 +123,59 @@ events:
     backtrace:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uvxpv0"
-      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uvxpv0"
+      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lg3xth"
+      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lg3xth"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Release>:Release>"
+      VCPKG_INSTALLED_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg"
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uvxpv0'
+        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lg3xth'
         
-        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_84d45.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3a995.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 4/7/2025 9:01:47 PM.
+        Build started 4/8/2025 7:07:27 AM.
         
-        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uvxpv0\\cmTC_84d45.vcxproj" on node 1 (default targets).
+        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lg3xth\\cmTC_3a995.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_84d45.dir\\Debug\\".
+          Creating directory "cmTC_3a995.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uvxpv0\\Debug\\".
-          Creating directory "cmTC_84d45.dir\\Debug\\cmTC_84d45.tlog\\".
+          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lg3xth\\Debug\\".
+          Creating directory "cmTC_3a995.dir\\Debug\\cmTC_3a995.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_84d45.dir\\Debug\\cmTC_84d45.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_84d45.dir\\Debug\\cmTC_84d45.tlog\\unsuccessfulbuild".
+          Creating "cmTC_3a995.dir\\Debug\\cmTC_3a995.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_3a995.dir\\Debug\\cmTC_3a995.tlog\\unsuccessfulbuild".
         ClCompile:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84d45.dir\\Debug\\\\" /Fd"cmTC_84d45.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3a995.dir\\Debug\\\\" /Fd"cmTC_3a995.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_84d45.dir\\Debug\\\\" /Fd"cmTC_84d45.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3a995.dir\\Debug\\\\" /Fd"cmTC_3a995.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uvxpv0\\Debug\\cmTC_84d45.exe" /INCREMENTAL /ILK:"cmTC_84d45.dir\\Debug\\cmTC_84d45.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uvxpv0/Debug/cmTC_84d45.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uvxpv0/Debug/cmTC_84d45.lib" /MACHINE:X64  /machine:x64 cmTC_84d45.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_84d45.vcxproj -> C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uvxpv0\\Debug\\cmTC_84d45.exe
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lg3xth\\Debug\\cmTC_3a995.exe" /INCREMENTAL /ILK:"cmTC_3a995.dir\\Debug\\cmTC_3a995.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lg3xth/Debug/cmTC_3a995.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lg3xth/Debug/cmTC_3a995.lib" /MACHINE:X64  /machine:x64 cmTC_3a995.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_3a995.vcxproj -> C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lg3xth\\Debug\\cmTC_3a995.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_84d45.dir\\Debug\\cmTC_84d45.tlog\\unsuccessfulbuild".
-          Touching "cmTC_84d45.dir\\Debug\\cmTC_84d45.tlog\\cmTC_84d45.lastbuildstate".
-        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uvxpv0\\cmTC_84d45.vcxproj" (default targets).
+          Deleting file "cmTC_3a995.dir\\Debug\\cmTC_3a995.tlog\\unsuccessfulbuild".
+          Touching "cmTC_3a995.dir\\Debug\\cmTC_3a995.tlog\\cmTC_3a995.lastbuildstate".
+        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lg3xth\\cmTC_3a995.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.66
+        Time Elapsed 00:00:00.91
         
       exitCode: 0
   -
@@ -189,7 +183,7 @@ events:
     backtrace:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -207,7 +201,7 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Running the C compiler's linker: "A:/Visual Studio/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.42.34435.0
@@ -217,56 +211,60 @@ events:
     backtrace:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-55e4h4"
-      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-55e4h4"
+      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6vt6w1"
+      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6vt6w1"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Release>:Release>"
+      VCPKG_INSTALLED_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg"
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-55e4h4'
+        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6vt6w1'
         
-        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b931b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cf8c4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 4/7/2025 9:01:50 PM.
+        Build started 4/8/2025 7:07:28 AM.
         
-        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-55e4h4\\cmTC_b931b.vcxproj" on node 1 (default targets).
+        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-6vt6w1\\cmTC_cf8c4.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_b931b.dir\\Debug\\".
+          Creating directory "cmTC_cf8c4.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-55e4h4\\Debug\\".
-          Creating directory "cmTC_b931b.dir\\Debug\\cmTC_b931b.tlog\\".
+          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-6vt6w1\\Debug\\".
+          Creating directory "cmTC_cf8c4.dir\\Debug\\cmTC_cf8c4.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_b931b.dir\\Debug\\cmTC_b931b.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_b931b.dir\\Debug\\cmTC_b931b.tlog\\unsuccessfulbuild".
+          Creating "cmTC_cf8c4.dir\\Debug\\cmTC_cf8c4.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_cf8c4.dir\\Debug\\cmTC_cf8c4.tlog\\unsuccessfulbuild".
         ClCompile:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b931b.dir\\Debug\\\\" /Fd"cmTC_b931b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cf8c4.dir\\Debug\\\\" /Fd"cmTC_cf8c4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b931b.dir\\Debug\\\\" /Fd"cmTC_b931b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_cf8c4.dir\\Debug\\\\" /Fd"cmTC_cf8c4.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Users\\Silver\\AppData\\Local\\Programs\\CLion\\bin\\cmake\\win\\x64\\share\\cmake-3.30\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-55e4h4\\Debug\\cmTC_b931b.exe" /INCREMENTAL /ILK:"cmTC_b931b.dir\\Debug\\cmTC_b931b.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-55e4h4/Debug/cmTC_b931b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-55e4h4/Debug/cmTC_b931b.lib" /MACHINE:X64  /machine:x64 cmTC_b931b.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_b931b.vcxproj -> C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-55e4h4\\Debug\\cmTC_b931b.exe
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-6vt6w1\\Debug\\cmTC_cf8c4.exe" /INCREMENTAL /ILK:"cmTC_cf8c4.dir\\Debug\\cmTC_cf8c4.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6vt6w1/Debug/cmTC_cf8c4.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-6vt6w1/Debug/cmTC_cf8c4.lib" /MACHINE:X64  /machine:x64 cmTC_cf8c4.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_cf8c4.vcxproj -> C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-6vt6w1\\Debug\\cmTC_cf8c4.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_b931b.dir\\Debug\\cmTC_b931b.tlog\\unsuccessfulbuild".
-          Touching "cmTC_b931b.dir\\Debug\\cmTC_b931b.tlog\\cmTC_b931b.lastbuildstate".
-        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-55e4h4\\cmTC_b931b.vcxproj" (default targets).
+          Deleting file "cmTC_cf8c4.dir\\Debug\\cmTC_cf8c4.tlog\\unsuccessfulbuild".
+          Touching "cmTC_cf8c4.dir\\Debug\\cmTC_cf8c4.tlog\\cmTC_cf8c4.lastbuildstate".
+        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-6vt6w1\\cmTC_cf8c4.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:01.25
+        Time Elapsed 00:00:00.89
         
       exitCode: 0
   -
@@ -274,7 +272,7 @@ events:
     backtrace:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|link\\.exe|lld-link(\\.exe)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
@@ -292,7 +290,7 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
-      - "CMakeLists.txt:7 (project)"
+      - "CMakeLists.txt:9 (project)"
     message: |
       Running the CXX compiler's linker: "A:/Visual Studio/BuildTools/VC/Tools/MSVC/14.42.34433/bin/HostX64/x64/link.exe" "-v"
       Microsoft (R) Incremental Linker Version 14.42.34435.0
@@ -309,51 +307,55 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
     directories:
-      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lbdkz1"
-      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lbdkz1"
+      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uuvtm5"
+      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uuvtm5"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake"
       CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Release>:Release>"
+      VCPKG_INSTALLED_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg"
     buildResult:
       variable: "COMPILER_HAS_THOSE_TOGGLES"
       cached: true
       stdout: |
-        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-lbdkz1'
+        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-uuvtm5'
         
-        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_e869e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_40867.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 4/7/2025 9:01:51 PM.
+        Build started 4/8/2025 7:07:29 AM.
         
-        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\cmTC_e869e.vcxproj" on node 1 (default targets).
+        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\cmTC_40867.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_e869e.dir\\Debug\\".
+          Creating directory "cmTC_40867.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\Debug\\".
-          Creating directory "cmTC_e869e.dir\\Debug\\cmTC_e869e.tlog\\".
+          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\Debug\\".
+          Creating directory "cmTC_40867.dir\\Debug\\cmTC_40867.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_e869e.dir\\Debug\\cmTC_e869e.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_e869e.dir\\Debug\\cmTC_e869e.tlog\\unsuccessfulbuild".
+          Creating "cmTC_40867.dir\\Debug\\cmTC_40867.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_40867.dir\\Debug\\cmTC_40867.tlog\\unsuccessfulbuild".
         ClCompile:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e869e.dir\\Debug\\\\" /Fd"cmTC_e869e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\src.c"
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40867.dir\\Debug\\\\" /Fd"cmTC_40867.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e869e.dir\\Debug\\\\" /Fd"cmTC_e869e.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\src.c"
-        cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\cmTC_e869e.vcxproj]
-        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\cmTC_e869e.vcxproj" (default targets) -- FAILED.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40867.dir\\Debug\\\\" /Fd"cmTC_40867.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\src.c"
+        cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\cmTC_40867.vcxproj]
+        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\cmTC_40867.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\cmTC_e869e.vcxproj" (default target) (1) ->
+        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\cmTC_40867.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-lbdkz1\\cmTC_e869e.vcxproj]
+          cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-uuvtm5\\cmTC_40867.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.70
+        Time Elapsed 00:00:00.43
         
       exitCode: 1
   -
@@ -363,56 +365,60 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
       - "thirdparty/raylib/src/external/glfw/CMakeLists.txt:60 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w7grqs"
-      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w7grqs"
+      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3qrdfu"
+      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3qrdfu"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake;C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/src/external/glfw/CMake/modules"
       CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Release>:Release>"
+      VCPKG_INSTALLED_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg"
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-w7grqs'
+        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-3qrdfu'
         
-        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ba4d0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_15424.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 4/7/2025 9:01:52 PM.
+        Build started 4/8/2025 7:07:30 AM.
         
-        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\cmTC_ba4d0.vcxproj" on node 1 (default targets).
+        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\cmTC_15424.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_ba4d0.dir\\Debug\\".
+          Creating directory "cmTC_15424.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\Debug\\".
-          Creating directory "cmTC_ba4d0.dir\\Debug\\cmTC_ba4d0.tlog\\".
+          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\Debug\\".
+          Creating directory "cmTC_15424.dir\\Debug\\cmTC_15424.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_ba4d0.dir\\Debug\\cmTC_ba4d0.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_ba4d0.dir\\Debug\\cmTC_ba4d0.tlog\\unsuccessfulbuild".
+          Creating "cmTC_15424.dir\\Debug\\cmTC_15424.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_15424.dir\\Debug\\cmTC_15424.tlog\\unsuccessfulbuild".
         ClCompile:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ba4d0.dir\\Debug\\\\" /Fd"cmTC_ba4d0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\src.c"
-          Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15424.dir\\Debug\\\\" /Fd"cmTC_15424.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\src.c"
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ba4d0.dir\\Debug\\\\" /Fd"cmTC_ba4d0.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\src.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_15424.dir\\Debug\\\\" /Fd"cmTC_15424.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\src.c"
           src.c
-        C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\cmTC_ba4d0.vcxproj]
-        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\cmTC_ba4d0.vcxproj" (default targets) -- FAILED.
+        C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\cmTC_15424.vcxproj]
+        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\cmTC_15424.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\cmTC_ba4d0.vcxproj" (default target) (1) ->
+        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\cmTC_15424.vcxproj" (default target) (1) ->
         (ClCompile target) -> 
-          C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-w7grqs\\cmTC_ba4d0.vcxproj]
+          C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-3qrdfu\\cmTC_15424.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.74
+        Time Elapsed 00:00:00.55
         
       exitCode: 1
   -
@@ -421,58 +427,63 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
       - "thirdparty/raylib/src/external/glfw/CMakeLists.txt:60 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-moxtwd"
-      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-moxtwd"
+      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qwwg7x"
+      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qwwg7x"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake;C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/src/external/glfw/CMake/modules"
       CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Release>:Release>"
+      VCPKG_INSTALLED_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg"
     buildResult:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-moxtwd'
+        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qwwg7x'
         
-        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_308c9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_db372.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 4/7/2025 9:01:53 PM.
+        Build started 4/8/2025 7:07:31 AM.
         
-        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\cmTC_308c9.vcxproj" on node 1 (default targets).
+        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\cmTC_db372.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_308c9.dir\\Debug\\".
+          Creating directory "cmTC_db372.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\Debug\\".
-          Creating directory "cmTC_308c9.dir\\Debug\\cmTC_308c9.tlog\\".
+          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\Debug\\".
+          Creating directory "cmTC_db372.dir\\Debug\\cmTC_db372.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_308c9.dir\\Debug\\cmTC_308c9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_308c9.dir\\Debug\\cmTC_308c9.tlog\\unsuccessfulbuild".
+          Creating "cmTC_db372.dir\\Debug\\cmTC_db372.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_db372.dir\\Debug\\cmTC_db372.tlog\\unsuccessfulbuild".
         ClCompile:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_308c9.dir\\Debug\\\\" /Fd"cmTC_308c9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\CheckFunctionExists.c"
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db372.dir\\Debug\\\\" /Fd"cmTC_db372.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_308c9.dir\\Debug\\\\" /Fd"cmTC_308c9.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_db372.dir\\Debug\\\\" /Fd"cmTC_db372.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\Debug\\cmTC_308c9.exe" /INCREMENTAL /ILK:"cmTC_308c9.dir\\Debug\\cmTC_308c9.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-moxtwd/Debug/cmTC_308c9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-moxtwd/Debug/cmTC_308c9.lib" /MACHINE:X64  /machine:x64 cmTC_308c9.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\cmTC_308c9.vcxproj]
-        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\cmTC_308c9.vcxproj" (default targets) -- FAILED.
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\Debug\\cmTC_db372.exe" /INCREMENTAL /ILK:"cmTC_db372.dir\\Debug\\cmTC_db372.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qwwg7x/Debug/cmTC_db372.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qwwg7x/Debug/cmTC_db372.lib" /MACHINE:X64  /machine:x64 cmTC_db372.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\cmTC_db372.vcxproj]
+        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\cmTC_db372.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\cmTC_308c9.vcxproj" (default target) (1) ->
+        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\cmTC_db372.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-moxtwd\\cmTC_308c9.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-qwwg7x\\cmTC_db372.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.93
+        Time Elapsed 00:00:00.67
         
       exitCode: 1
   -
@@ -481,58 +492,63 @@ events:
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake:69 (try_compile)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
       - "C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/vcpkg.cmake:893 (_find_package)"
       - "thirdparty/raylib/src/external/glfw/CMakeLists.txt:60 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fafdc6"
-      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fafdc6"
+      source: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pcvaef"
+      binary: "C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pcvaef"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
       CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
       CMAKE_MODULE_PATH: "C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake;C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/src/external/glfw/CMake/modules"
       CMAKE_MSVC_RUNTIME_LIBRARY: "MultiThreaded$<$<CONFIG:Release>:Release>"
+      VCPKG_INSTALLED_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg/installed"
+      VCPKG_PREFER_SYSTEM_LIBS: "OFF"
+      VCPKG_TARGET_TRIPLET: "x64-windows"
+      Z_VCPKG_ROOT_DIR: "C:/Users/Silver/.vcpkg-clion/vcpkg"
     buildResult:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fafdc6'
+        Change Dir: 'C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pcvaef'
         
-        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_40707.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "A:/Visual Studio/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_23368.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         MSBuild version 17.12.12+1cce77968 for .NET Framework
-        Build started 4/7/2025 9:01:54 PM.
+        Build started 4/8/2025 7:07:32 AM.
         
-        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\cmTC_40707.vcxproj" on node 1 (default targets).
+        Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\cmTC_23368.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_40707.dir\\Debug\\".
+          Creating directory "cmTC_23368.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\Debug\\".
-          Creating directory "cmTC_40707.dir\\Debug\\cmTC_40707.tlog\\".
+          Creating directory "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\Debug\\".
+          Creating directory "cmTC_23368.dir\\Debug\\cmTC_23368.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_40707.dir\\Debug\\cmTC_40707.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_40707.dir\\Debug\\cmTC_40707.tlog\\unsuccessfulbuild".
+          Creating "cmTC_23368.dir\\Debug\\cmTC_23368.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_23368.dir\\Debug\\cmTC_23368.tlog\\unsuccessfulbuild".
         ClCompile:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40707.dir\\Debug\\\\" /Fd"cmTC_40707.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\CheckFunctionExists.c"
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_23368.dir\\Debug\\\\" /Fd"cmTC_23368.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.42.34435 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_40707.dir\\Debug\\\\" /Fd"cmTC_40707.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_23368.dir\\Debug\\\\" /Fd"cmTC_23368.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\Debug\\cmTC_40707.exe" /INCREMENTAL /ILK:"cmTC_40707.dir\\Debug\\cmTC_40707.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fafdc6/Debug/cmTC_40707.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-fafdc6/Debug/cmTC_40707.lib" /MACHINE:X64  /machine:x64 cmTC_40707.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\cmTC_40707.vcxproj]
-        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\cmTC_40707.vcxproj" (default targets) -- FAILED.
+          A:\\Visual Studio\\BuildTools\\VC\\Tools\\MSVC\\14.42.34433\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\Debug\\cmTC_23368.exe" /INCREMENTAL /ILK:"cmTC_23368.dir\\Debug\\cmTC_23368.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pcvaef/Debug/cmTC_23368.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-pcvaef/Debug/cmTC_23368.lib" /MACHINE:X64  /machine:x64 cmTC_23368.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\cmTC_23368.vcxproj]
+        Done Building Project "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\cmTC_23368.vcxproj" (default targets) -- FAILED.
         
         Build FAILED.
         
-        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\cmTC_40707.vcxproj" (default target) (1) ->
+        "C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\cmTC_23368.vcxproj" (default target) (1) ->
         (Link target) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-fafdc6\\cmTC_40707.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\DEV\\LearnCMake2\\RaylibplusTMX\\cmake-build-debug\\CMakeFiles\\CMakeScratch\\TryCompile-pcvaef\\cmTC_23368.vcxproj]
         
             0 Warning(s)
             1 Error(s)
         
-        Time Elapsed 00:00:00.79
+        Time Elapsed 00:00:00.69
         
       exitCode: 1
 ...

@@ -24,6 +24,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{5B7E0769-44F1-330F-B05F-2809B37997AF}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
+    <VcpkgEnabled>false</VcpkgEnabled>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
     <ProjectName>cmakeTMXProject</ProjectName>
@@ -58,7 +59,7 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="do_not_import_user.props" Condition="exists('do_not_import_user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -90,7 +91,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -111,18 +112,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;RECOURSES_PATH=\"C:/DEV/LearnCMake2/RaylibplusTMX/recourses/\";PLATFORM_DESKTOP;GRAPHICS_API_OPENGL_33;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/Debug/cmakeTMXProject.exe -installedDir C:/Users/Silver/.vcpkg-clion/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>thirdparty\raylib\raylib\Debug\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>thirdparty\raylib\raylib\Debug\raylib.lib;thirdparty\tileson\src\Debug\raylib-tileson.lib;thirdparty\raylib\raylib\Debug\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -137,7 +150,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -159,18 +172,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RECOURSES_PATH=\"C:/DEV/LearnCMake2/RaylibplusTMX/recourses/\";PLATFORM_DESKTOP;GRAPHICS_API_OPENGL_33;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/Release/cmakeTMXProject.exe -installedDir C:/Users/Silver/.vcpkg-clion/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>thirdparty\raylib\raylib\Release\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>thirdparty\raylib\raylib\Release\raylib.lib;thirdparty\tileson\src\Release\raylib-tileson.lib;thirdparty\raylib\raylib\Release\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -185,7 +210,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -207,18 +232,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RECOURSES_PATH=\"C:/DEV/LearnCMake2/RaylibplusTMX/recourses/\";PLATFORM_DESKTOP;GRAPHICS_API_OPENGL_33;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/MinSizeRel/cmakeTMXProject.exe -installedDir C:/Users/Silver/.vcpkg-clion/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>thirdparty\raylib\raylib\MinSizeRel\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>thirdparty\raylib\raylib\MinSizeRel\raylib.lib;thirdparty\tileson\src\MinSizeRel\raylib-tileson.lib;thirdparty\raylib\raylib\MinSizeRel\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -233,7 +270,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -254,18 +291,30 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;RECOURSES_PATH=\"C:/DEV/LearnCMake2/RaylibplusTMX/recourses/\";PLATFORM_DESKTOP;GRAPHICS_API_OPENGL_33;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\DEV\LearnCMake2\RaylibplusTMX\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\include;C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\tileson\src\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
       <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
+    <PostBuildEvent>
+      <Message></Message>
+      <Command>setlocal
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/Silver/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/RelWithDebInfo/cmakeTMXProject.exe -installedDir C:/Users/Silver/.vcpkg-clion/vcpkg/installed/x64-windows/bin -OutVariable out
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+    </PostBuildEvent>
     <Link>
-      <AdditionalDependencies>thirdparty\raylib\raylib\RelWithDebInfo\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>thirdparty\raylib\raylib\RelWithDebInfo\raylib.lib;thirdparty\tileson\src\RelWithDebInfo\raylib-tileson.lib;thirdparty\raylib\raylib\RelWithDebInfo\raylib.lib;opengl32.lib;glu32.lib;winmm.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -291,7 +340,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeDependentOption.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/DEV/LearnCMake2/RaylibplusTMX/CMakeLists.txt</Message>
@@ -304,7 +353,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeDependentOption.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/DEV/LearnCMake2/RaylibplusTMX/CMakeLists.txt</Message>
@@ -317,7 +366,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeDependentOption.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/DEV/LearnCMake2/RaylibplusTMX/CMakeLists.txt</Message>
@@ -330,7 +379,7 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeCXXCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeRCCompiler.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\3.30.5\CMakeSystem.cmake;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\cmake.verify_globs;C:\Users\Silver\.vcpkg-clion\vcpkg\scripts\buildsystems\vcpkg.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCXXInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeDependentOption.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeGenericSystem.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeInitializeConfigs.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeLanguageInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeRCInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Compiler\MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-Initialize.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows-MSVC.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\Windows.cmake;C:\Users\Silver\AppData\Local\Programs\CLion\bin\cmake\win\x64\share\cmake-3.30\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
@@ -354,6 +403,10 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ProjectReference Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.vcxproj">
       <Project>{0C9D78AC-3485-3379-8CA0-448A3DBA2A80}</Project>
       <Name>raylib</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\tileson\src\raylib-tileson.vcxproj">
+      <Project>{2393AFA2-3605-3344-A9D0-51D9F05AD037}</Project>
+      <Name>raylib-tileson</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

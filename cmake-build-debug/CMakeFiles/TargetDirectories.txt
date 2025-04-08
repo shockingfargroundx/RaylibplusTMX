@@ -17,3 +17,9 @@ C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/raylib/raylib/exte
 C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/raylib/raylib/external/glfw/src/CMakeFiles/update_mappings.dir
 C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/raylib/raylib/external/glfw/src/CMakeFiles/PACKAGE.dir
 C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/raylib/raylib/external/glfw/src/CMakeFiles/INSTALL.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/tileson/CMakeFiles/PACKAGE.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/tileson/CMakeFiles/INSTALL.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/tileson/CMakeFiles/ALL_BUILD.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/tileson/src/CMakeFiles/raylib-tileson.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/tileson/src/CMakeFiles/PACKAGE.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/tileson/src/CMakeFiles/INSTALL.dir
