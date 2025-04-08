@@ -1,1 +1,0 @@
-C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\external\glfw\src\glfw.dir\Debug\glfw.lib

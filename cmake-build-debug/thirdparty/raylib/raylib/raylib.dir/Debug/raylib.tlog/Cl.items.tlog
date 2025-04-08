@@ -1,7 +1,0 @@
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\raudio.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\raudio.obj
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\rcore.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\rcore.obj
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\rmodels.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\rmodels.obj
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\rshapes.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\rshapes.obj
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\rtext.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\rtext.obj
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\rtextures.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\rtextures.obj
-C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\utils.c;C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.dir\Debug\utils.obj
