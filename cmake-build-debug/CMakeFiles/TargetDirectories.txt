@@ -1,0 +1,5 @@
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/cmakeTMXProject.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/ALL_BUILD.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/ZERO_CHECK.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/raylib/CMakeFiles/raylib.dir
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/thirdparty/raylib/CMakeFiles/ALL_BUILD.dir
