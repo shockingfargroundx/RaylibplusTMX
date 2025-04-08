@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\CMakeFiles\bfcdc3c59eda6a18b08085665d4f2257\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\DEV\LearnCMake2\RaylibplusTMX\thirdparty\raylib\src\external\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\external\glfw\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B25E5152-5EA0-3E14-8403-9168690F5D03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9B573865-D86D-31D7-AF40-9CD41D6C9CF0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

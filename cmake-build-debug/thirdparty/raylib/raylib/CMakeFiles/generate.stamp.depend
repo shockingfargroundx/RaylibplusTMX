@@ -1,0 +1,20 @@
+# CMake generation dependency list for this directory.
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/cmake.verify_globs
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/CompileDefinitions.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/GlfwImport.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/InstallConfigurations.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/JoinPaths.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/LibraryConfigurations.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/LibraryPathToLinkerFlags.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/PackConfigurations.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/PopulateConfigVariablesLocally.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/cmake/raylib-config-version.cmake
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/raylib.pc.in
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/src/CMakeLists.txt
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CPack.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CPackComponent.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindOpenGL.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/GNUInstallDirs.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Templates/CPackConfig.cmake.in

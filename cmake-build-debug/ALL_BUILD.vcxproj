@@ -177,7 +177,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <Project>{5B7E0769-44F1-330F-B05F-2809B37997AF}</Project>
       <Name>cmakeTMXProject</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib.vcxproj">
+    <ProjectReference Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\external\glfw\src\glfw.vcxproj">
+      <Project>{BEC4C6B1-07BB-3B72-A368-9F608BF73BC2}</Project>
+      <Name>glfw</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\DEV\LearnCMake2\RaylibplusTMX\cmake-build-debug\thirdparty\raylib\raylib\raylib.vcxproj">
       <Project>{0C9D78AC-3485-3379-8CA0-448A3DBA2A80}</Project>
       <Name>raylib</Name>
     </ProjectReference>

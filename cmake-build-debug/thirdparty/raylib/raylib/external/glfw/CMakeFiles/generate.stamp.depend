@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/DEV/LearnCMake2/RaylibplusTMX/cmake-build-debug/CMakeFiles/cmake.verify_globs
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/src/external/glfw/CMake/glfw3Config.cmake.in
+C:/DEV/LearnCMake2/RaylibplusTMX/thirdparty/raylib/src/external/glfw/CMakeLists.txt
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakeDependentOption.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CMakePackageConfigHelpers.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/FindThreads.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/GNUInstallDirs.cmake
+C:/Users/Silver/AppData/Local/Programs/CLion/bin/cmake/win/x64/share/cmake-3.30/Modules/WriteBasicConfigVersionFile.cmake
